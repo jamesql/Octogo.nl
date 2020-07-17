@@ -40,4 +40,4 @@ async function start() {
 }
 
 
-export default start;
+export default start as any;
