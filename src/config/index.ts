@@ -8,7 +8,7 @@ const config = {
     web: {
 		userAgent: `Octogo.nl`,
 		host: "localhost",
-		secure: true,
+		secure: false,
 		get port() { return 0 || (config.web.secure ? 443 : 80); },
 		serverOptions: {
 			ca: fs.readFileSync(`${__dirname}/ssl/CA-Chain-X1.crt`).toString(),
