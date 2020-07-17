@@ -1,12 +1,12 @@
 /// <refrence path="./util/@types/global.d.ts" />
-import web from "./WEB";
+import start from "./WEB";
 
 export default class OctogonlServer
 {
     async launch()
     {
         // use web.prototypes;
-        await web.start();
+        await start();
     }
 
     
