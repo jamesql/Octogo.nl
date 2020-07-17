@@ -30,12 +30,14 @@ app
     .use(morgan("dev"))
     .use(express.static(`${__dirname}/public`))
     .use("/", require("./routers/index").default);
-    
-(config.web.secure ? https : http)
-    .createServer(config.web.serverOptions, app)
-    .listen(config.web.port, config.web.host, () =>
-        console.log(`Listening on http${config.web.secure ? "s" : ""}://${config.web.host}:${config.web.port}`)
-);
+
+async function start() {
+    (config.web.secure ? https : http)
+        .createServer(config.web.serverOptions, app)
+        .listen(config.web.port, config.web.host, () =>
+            console.log(`Listening on http${config.web.secure ? "s" : ""}://${config.web.host}:${config.web.port}`)
+        );
+}
 
 
-export default null;
+export default start;
