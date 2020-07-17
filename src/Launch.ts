@@ -5,7 +5,6 @@ export default class OctogonlServer
 {
     async launch()
     {
-        // use web.prototypes;
         await start();
     }
 
